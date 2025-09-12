@@ -1,0 +1,1045 @@
+{
+  "id": "206247b6-9fec-4ed2-8927-e4f388c674d4",
+  "revision": 0,
+  "last_node_id": 118,
+  "last_link_id": 155,
+  "nodes": [
+    {
+      "id": 112,
+      "type": "SaveAudio",
+      "pos": [
+        -52.606510162353516,
+        407.6274108886719
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 149
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 111,
+      "type": "FL_ChatterboxVC",
+      "pos": [
+        -446.74560546875,
+        404.2486267089844
+      ],
+      "size": [
+        315,
+        78
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "input_audio",
+          "name": "input_audio",
+          "type": "AUDIO"
+        },
+        {
+          "label": "target_voice",
+          "name": "target_voice",
+          "type": "AUDIO"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            149
+          ]
+        },
+        {
+          "label": "message",
+          "name": "message",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FL_ChatterboxVC",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 98,
+      "type": "AudioSeparation",
+      "pos": [
+        -19.234590530395508,
+        -819.8171997070312
+      ],
+      "size": [
+        280.7929992675781,
+        166
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "label": "Bass",
+          "name": "Bass",
+          "type": "AUDIO"
+        },
+        {
+          "label": "Drums",
+          "name": "Drums",
+          "type": "AUDIO"
+        },
+        {
+          "label": "Other",
+          "name": "Other",
+          "type": "AUDIO"
+        },
+        {
+          "label": "Vocals",
+          "name": "Vocals",
+          "type": "AUDIO",
+          "links": [
+            137,
+            144
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioSeparation",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "linear",
+        10,
+        0.1
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 106,
+      "type": "AudioCrop",
+      "pos": [
+        -4.624786376953125,
+        -1011.456787109375
+      ],
+      "size": [
+        298.1059265136719,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 140
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioCrop",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "0:00",
+        "1:00"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 102,
+      "type": "IndexTTSProNode",
+      "pos": [
+        340.76385498046875,
+        -1505.0975341796875
+      ],
+      "size": [
+        400,
+        476
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "narrator_audio",
+          "name": "narrator_audio",
+          "type": "AUDIO"
+        },
+        {
+          "label": "character1_audio",
+          "name": "character1_audio",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "character2_audio",
+          "name": "character2_audio",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "character3_audio",
+          "name": "character3_audio",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "character4_audio",
+          "name": "character4_audio",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "character5_audio",
+          "name": "character5_audio",
+          "shape": 7,
+          "type": "AUDIO"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO"
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IndexTTSProNode",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "<Narrator>This is a sample narrative text.<Character1>Hello.<Narrator>He said.",
+        "Index-TTS",
+        "auto",
+        1,
+        1603821918,
+        "randomize",
+        1,
+        0.8,
+        30,
+        10,
+        0,
+        3,
+        600
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 117,
+      "type": "IndexTTSRun",
+      "pos": [
+        831.12109375,
+        -1396.1165771484375
+      ],
+      "size": [
+        315,
+        342
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO"
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING"
+        },
+        {
+          "label": "dialogue_audio_s2",
+          "name": "dialogue_audio_s2",
+          "shape": 7,
+          "type": "AUDIO"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IndexTTSRun",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "v1.5",
+        30,
+        0.8,
+        1,
+        3,
+        1000,
+        120,
+        4,
+        true,
+        false,
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 115,
+      "type": "AudioCrop",
+      "pos": [
+        -875.1737670898438,
+        -0.747473955154419
+      ],
+      "size": [
+        298.1059265136719,
+        82
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioCrop",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "0:00",
+        "1:00"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 118,
+      "type": "LoadAudio",
+      "pos": [
+        -1277.9840087890625,
+        142.635498046875
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ee3e0656275ea53ee290563d639f72544bdb9bfe8cb20d78385a411092f4eede.mp3",
+        null,
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 116,
+      "type": "AudioCrop",
+      "pos": [
+        -879.397216796875,
+        186.77703857421875
+      ],
+      "size": [
+        298.1059265136719,
+        82
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            155
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioCrop",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "0:00",
+        "1:00"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 108,
+      "type": "SaveAudio",
+      "pos": [
+        -50.41335678100586,
+        40.518043518066406
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 146
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 105,
+      "type": "SeedVCRun",
+      "pos": [
+        -453.9808044433594,
+        12.778104782104492
+      ],
+      "size": [
+        315,
+        222
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "source_audio",
+          "name": "source_audio",
+          "type": "AUDIO",
+          "link": 153
+        },
+        {
+          "label": "ref_audio",
+          "name": "ref_audio",
+          "type": "AUDIO",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            146
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeedVCRun",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        30,
+        1,
+        0.7,
+        false,
+        true,
+        0,
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 113,
+      "type": "LoadAudio",
+      "pos": [
+        -1278.885009765625,
+        -120.01986694335938
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ee3e0656275ea53ee290563d639f72544bdb9bfe8cb20d78385a411092f4eede.mp3",
+        null,
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 96,
+      "type": "IndexTTSNode",
+      "pos": [
+        368.1464538574219,
+        -953.6804809570312
+      ],
+      "size": [
+        400,
+        420
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "reference_audio",
+          "name": "reference_audio",
+          "type": "AUDIO",
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            134
+          ]
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IndexTTSNode",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "啊，主人，您终于回来了。",
+        "IndexTTS-1.5",
+        "zh",
+        1,
+        271059435,
+        "randomize",
+        1,
+        0.8,
+        30,
+        10,
+        0,
+        3,
+        600,
+        "auto"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 104,
+      "type": "LoadAudio",
+      "pos": [
+        -402.8841857910156,
+        -1123.02880859375
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            140
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "ee3e0656275ea53ee290563d639f72544bdb9bfe8cb20d78385a411092f4eede.mp3",
+        null,
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 101,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -416.1490173339844,
+        -887.1095581054688
+      ],
+      "size": [
+        322.9989318847656,
+        334
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "meta_batch",
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager"
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "label": "frame_count",
+          "name": "frame_count",
+          "type": "INT"
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            145
+          ]
+        },
+        {
+          "label": "video_info",
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadVideo",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": {
+        "video": "8d2cc8259a3eb255ee38c3635733633aacd4a9170b0fc7aaaabc57025038477a.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 1000,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "choose video to upload": "image",
+        "videopreview": {
+          "paused": false,
+          "hidden": false,
+          "params": {
+            "custom_height": 512,
+            "filename": "8d2cc8259a3eb255ee38c3635733633aacd4a9170b0fc7aaaabc57025038477a.mp4",
+            "force_rate": 0,
+            "custom_width": 0,
+            "select_every_nth": 1,
+            "frame_load_cap": 1000,
+            "format": "video/mp4",
+            "skip_first_frames": 0,
+            "type": "input"
+          }
+        }
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 107,
+      "type": "PreviewAudio",
+      "pos": [
+        -20.252208709716797,
+        -570.9584350585938
+      ],
+      "size": [
+        288.12322998046875,
+        88
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 144
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 99,
+      "type": "SaveAudio",
+      "pos": [
+        884.0411376953125,
+        -895.637451171875
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 134
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#355",
+          "groupcolor": "#8AA",
+          "color": "#233"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      134,
+      96,
+      0,
+      99,
+      0,
+      "AUDIO"
+    ],
+    [
+      137,
+      98,
+      3,
+      96,
+      0,
+      "AUDIO"
+    ],
+    [
+      140,
+      104,
+      0,
+      106,
+      0,
+      "AUDIO"
+    ],
+    [
+      144,
+      98,
+      3,
+      107,
+      0,
+      "AUDIO"
+    ],
+    [
+      145,
+      101,
+      2,
+      98,
+      0,
+      "AUDIO"
+    ],
+    [
+      146,
+      105,
+      0,
+      108,
+      0,
+      "AUDIO"
+    ],
+    [
+      149,
+      111,
+      0,
+      112,
+      0,
+      "AUDIO"
+    ],
+    [
+      152,
+      113,
+      0,
+      115,
+      0,
+      "AUDIO"
+    ],
+    [
+      153,
+      115,
+      0,
+      105,
+      0,
+      "AUDIO"
+    ],
+    [
+      154,
+      118,
+      0,
+      116,
+      0,
+      "AUDIO"
+    ],
+    [
+      155,
+      116,
+      0,
+      105,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Voice Ref",
+      "bounding": [
+        -1305.4580078125,
+        -203.37120056152344,
+        1698.6346435546875,
+        1166.4840087890625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "ue_links": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "VHS_latentpreviewrate": 0,
+    "VHS_latentpreview": false,
+    "node_versions": {
+      "ComfyUI-WanVideoWrapper": "5a2383621a05825d0d0437781afcb8552d9590fd",
+      "ComfyUI-VideoHelperSuite": "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
+      "ComfyUI-KJNodes": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+      "comfy-core": "0.3.26"
+    },
+    "ds": {
+      "scale": 0.7247295000000004,
+      "offset": [
+        1198.9784519627929,
+        1602.026136691962
+      ]
+    },
+    "frontendVersion": "1.23.0"
+  },
+  "version": 0.4
+}

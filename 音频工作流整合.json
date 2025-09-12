@@ -1,0 +1,1273 @@
+{
+  "id": "2a052a9f-c497-4e2f-a2e4-1ca88cfb9865",
+  "revision": 0,
+  "last_node_id": 39,
+  "last_link_id": 31,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "SenseVoiceNode",
+      "pos": [
+        1415.5675048828125,
+        755.5244140625
+      ],
+      "size": [
+        322.61883544921875,
+        122.57049560546875
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "label": "out(TEXT)",
+          "name": "out(TEXT)",
+          "type": "TEXT",
+          "slot_index": 0,
+          "links": [
+            10
+          ]
+        },
+        {
+          "label": "out(STRING)",
+          "name": "out(STRING)",
+          "type": "STRING",
+          "slot_index": 1,
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SenseVoiceNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 6,
+      "type": "TextNode",
+      "pos": [
+        343.79913330078125,
+        -255.90443420410156
+      ],
+      "size": [
+        286.0884094238281,
+        127.07433319091797
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "TEXT",
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "需要转语音文本",
+      "properties": {
+        "Node name for S&R": "TextNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "来都来了，不如喝一盏茶再走吧？"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 13,
+      "type": "ShowTextNode",
+      "pos": [
+        1878.5675048828125,
+        529.5244140625
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "sense_voice_output",
+          "name": "sense_voice_output",
+          "type": "TEXT",
+          "link": 10
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ShowTextNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "<|zh|><|NEUTRAL|><|Speech|><|woitn|>尾巴不只能用来挠痒痒哦"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 12,
+      "type": "LoadAudio",
+      "pos": [
+        1414.5675048828125,
+        535.5244140625
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "妲己.MP3",
+        null,
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 14,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1891,
+        777
+      ],
+      "size": [
+        391.0037536621094,
+        112
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "shape": 6,
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 32,
+      "type": "LoadAudio",
+      "pos": [
+        194.54855346679688,
+        1094.7943115234375
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            23,
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "e1580baa732768ea8289f6256560bf2dd45cc3e40f332dedc990715e4cec78ac.flac",
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 30,
+      "type": "LoadAudio",
+      "pos": [
+        1382.7120361328125,
+        1120.929931640625
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "9df64daf45cd647d0ad45152e9dd54c153b2baace71cb939a430e52e6f98ab6d.WAV",
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 28,
+      "type": "NTCosyVoiceZeroShotSampler",
+      "pos": [
+        552.5222778320312,
+        1080.2259521484375
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "label": "tts_speech",
+          "name": "tts_speech",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NTCosyVoiceZeroShotSampler",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1,
+        "大家好，我是高允贞，",
+        "大家好，我是高允贞数字人，之前大家说我唱歌还不满意，今天再给大家来一段"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "NTCosyVoiceInstruct2Sampler",
+      "pos": [
+        569.5222778320312,
+        1343.2259521484375
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "tts_speech",
+          "name": "tts_speech",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NTCosyVoiceInstruct2Sampler",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        0.5,
+        "大家好，我是高允贞，",
+        ""
+      ]
+    },
+    {
+      "id": 37,
+      "type": "SaveAudio",
+      "pos": [
+        993.633056640625,
+        1406.060791015625
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 30
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "NTCosyVoiceCrossLingualSampler",
+      "pos": [
+        1716.7120361328125,
+        1101.929931640625
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "label": "tts_speech",
+          "name": "tts_speech",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            25,
+            31
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "NTCosyVoiceCrossLingualSampler",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1,
+        "大家好，我是高允贞，"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "SaveAudio",
+      "pos": [
+        2156.631591796875,
+        1201.5972900390625
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 31
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "SaveAudio",
+      "pos": [
+        1003,
+        1139
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 29
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "TextNode",
+      "pos": [
+        349,
+        -83
+      ],
+      "size": [
+        263.7754821777344,
+        88
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "TEXT",
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "上传音频文本",
+      "properties": {
+        "Node name for S&R": "TextNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "尾巴不只能用来挠痒痒哦"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 5,
+      "type": "CosyVoiceNode",
+      "pos": [
+        679.7991333007812,
+        -155.90443420410156
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "tts_text",
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 4
+        },
+        {
+          "label": "prompt_text",
+          "name": "prompt_text",
+          "shape": 7,
+          "type": "TEXT",
+          "link": 7
+        },
+        {
+          "label": "prompt_wav",
+          "name": "prompt_wav",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 8
+        },
+        {
+          "label": "instruct_text",
+          "name": "instruct_text",
+          "shape": 7,
+          "type": "TEXT"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            5,
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoiceNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        0.9,
+        "3s极速复刻",
+        "中文女",
+        164,
+        "randomize"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 3,
+      "type": "PreviewAudio",
+      "pos": [
+        1011.0057373046875,
+        600.2750854492188
+      ],
+      "size": [
+        329.62493896484375,
+        222.22781372070312
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 10,
+      "type": "LoadAudio",
+      "pos": [
+        368,
+        59
+      ],
+      "size": [
+        273.95184326171875,
+        198.9281768798828
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "title": "上传音频",
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "妲己.MP3",
+        null,
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 25,
+      "type": "SaveAudio",
+      "pos": [
+        814,
+        214
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 20
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "PreviewAudio",
+      "pos": [
+        1016,
+        -214
+      ],
+      "size": [
+        314.1670837402344,
+        405.59710693359375
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 15,
+      "type": "ChatTTS",
+      "pos": [
+        1393,
+        -222
+      ],
+      "size": [
+        400,
+        358
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            16,
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ChatTTS",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "chat T T S 是一款强大的对话式文本转语音模型。它有中英混读和多说话人的能力。",
+        "[speed_5][oral_2][laugh_0][break_6]",
+        1,
+        47,
+        "randomize",
+        0.7,
+        20,
+        0.3,
+        0.7,
+        1.05,
+        true
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 16,
+      "type": "PreviewAudio",
+      "pos": [
+        1843,
+        -222
+      ],
+      "size": [
+        510.7572937011719,
+        370.963134765625
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 26,
+      "type": "SaveAudio",
+      "pos": [
+        1727,
+        185
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 21
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "TextNode",
+      "pos": [
+        350.7453308105469,
+        600.7321166992188
+      ],
+      "size": [
+        266.81341552734375,
+        166.03054809570312
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "TEXT",
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "尾巴不只能用来挠痒痒哦"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 1,
+      "type": "CosyVoiceNode",
+      "pos": [
+        650.7456665039062,
+        600.7321166992188
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "tts_text",
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 1
+        },
+        {
+          "label": "prompt_text",
+          "name": "prompt_text",
+          "shape": 7,
+          "type": "TEXT"
+        },
+        {
+          "label": "prompt_wav",
+          "name": "prompt_wav",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "instruct_text",
+          "name": "instruct_text",
+          "shape": 7,
+          "type": "TEXT"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            2,
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoiceNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        0.8,
+        "预训练音色",
+        "中文女",
+        1382,
+        "randomize"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 27,
+      "type": "SaveAudio",
+      "pos": [
+        884.745361328125,
+        865.7322387695312
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "PreviewAudio",
+      "pos": [
+        2196.15869140625,
+        1062.360107421875
+      ],
+      "size": [
+        315,
+        88
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "TEXT"
+    ],
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      4,
+      6,
+      0,
+      5,
+      0,
+      "TEXT"
+    ],
+    [
+      5,
+      5,
+      0,
+      7,
+      0,
+      "AUDIO"
+    ],
+    [
+      7,
+      9,
+      0,
+      5,
+      1,
+      "TEXT"
+    ],
+    [
+      8,
+      10,
+      0,
+      5,
+      2,
+      "AUDIO"
+    ],
+    [
+      9,
+      12,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ],
+    [
+      10,
+      11,
+      0,
+      13,
+      0,
+      "TEXT"
+    ],
+    [
+      11,
+      11,
+      1,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      15,
+      0,
+      16,
+      0,
+      "AUDIO"
+    ],
+    [
+      20,
+      5,
+      0,
+      25,
+      0,
+      "AUDIO"
+    ],
+    [
+      21,
+      15,
+      0,
+      26,
+      0,
+      "AUDIO"
+    ],
+    [
+      22,
+      1,
+      0,
+      27,
+      0,
+      "AUDIO"
+    ],
+    [
+      23,
+      32,
+      0,
+      28,
+      0,
+      "AUDIO"
+    ],
+    [
+      24,
+      30,
+      0,
+      29,
+      0,
+      "AUDIO"
+    ],
+    [
+      25,
+      29,
+      0,
+      31,
+      0,
+      "AUDIO"
+    ],
+    [
+      27,
+      32,
+      0,
+      34,
+      0,
+      "AUDIO"
+    ],
+    [
+      29,
+      28,
+      0,
+      36,
+      0,
+      "AUDIO"
+    ],
+    [
+      30,
+      34,
+      0,
+      37,
+      0,
+      "AUDIO"
+    ],
+    [
+      31,
+      29,
+      0,
+      38,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Chat T T S 文本转语音",
+      "bounding": [
+        1374,
+        -446,
+        1059,
+        744
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "录制音色文本转语音",
+      "bounding": [
+        325,
+        -451,
+        1022,
+        744
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "文本转语音",
+      "bounding": [
+        332.7453308105469,
+        309.7321472167969,
+        1022,
+        623
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "语音转文字",
+      "bounding": [
+        1375,
+        300,
+        1057,
+        623
+      ],
+      "color": "#3f789e",
+      "font_size": 100,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "文本转语音",
+      "bounding": [
+        172,
+        964,
+        1179,
+        588
+      ],
+      "color": "#3f789e",
+      "font_size": 40,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "夸语种迁移TTS",
+      "bounding": [
+        1377,
+        951,
+        1165,
+        621
+      ],
+      "color": "#3f789e",
+      "font_size": 40,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ds": {
+      "scale": 0.4950000000000003,
+      "offset": [
+        659.1525112481751,
+        875.7503908330622
+      ]
+    },
+    "frontendVersion": "1.23.0",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
