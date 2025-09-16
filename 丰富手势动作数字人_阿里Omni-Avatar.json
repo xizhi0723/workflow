@@ -1,0 +1,530 @@
+{
+  "id": "4ea466d2-8bfb-4336-b39a-efb2a9df45a1",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 13,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "LoadAudio",
+      "pos": [
+        872.5657348632812,
+        876.8723754882812
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ttNbgOverride": {
+          "bgcolor": "#335",
+          "groupcolor": "#88A",
+          "color": "#223"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "2ec14fadef777a6943364ea3c194be46b8ec0a6693945b455de242b777c5c453.mp4",
+        null,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 8,
+      "type": "Text Multiline",
+      "pos": [
+        842.07958984375,
+        1120.7452392578125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Multiline",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "A realistic video of a women speaking directly to the camera , with dynamic and rhythmic hand gestures that complement his speech.   His hands are clearly visible, independent, and unobstructed.   His facial expressions are expressive and full of emotion, enhancing the delivery.   The camera remains steady, capturing sharp, clear movements and a focused, engaging presence."
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        861.9935302734375,
+        493.2708435058594
+      ],
+      "size": [
+        315,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "ttNbgOverride": {
+          "bgcolor": "#335",
+          "groupcolor": "#88A",
+          "color": "#223"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "0a52ca651f029f11ad784314f18def6c86d24376e3e4c232015de0473ae0228b.png",
+        "image"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 5,
+      "type": "SaveVideo",
+      "pos": [
+        2077.811767578125,
+        546.3160400390625
+      ],
+      "size": [
+        353.18182373046875,
+        733.727294921875
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "link": 4
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "ttNbgOverride": {
+          "bgcolor": "#335",
+          "groupcolor": "#88A",
+          "color": "#223"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "pl-Omni-Avatar",
+        "auto",
+        "auto"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 4,
+      "type": "RunningHub OmniAvatar AllinOne",
+      "pos": [
+        1554.6519775390625,
+        537.4053955078125
+      ],
+      "size": [
+        462.8372802734375,
+        292.9808044433594
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "cond_image",
+          "name": "cond_image",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "label": "cond_audio",
+          "name": "cond_audio",
+          "type": "AUDIO",
+          "link": 2
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "label": "video",
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHub OmniAvatar AllinOne",
+        "ttNbgOverride": {
+          "bgcolor": "#335",
+          "groupcolor": "#88A",
+          "color": "#223"
+        },
+        "widget_ue_connectable": {
+          "prompt": true
+        }
+      },
+      "widgets_values": [
+        "A realistic video of a man speaking directly to the camera on a sofa, with dynamic and rhythmic hand gestures that complement his speech. His hands are clearly visible, independent, and unobstructed. His facial expressions are expressive and full of emotion, enhancing the delivery. The camera remains steady, capturing sharp, clear movements and a focused, engaging presence.",
+        20,
+        4.5,
+        4.5,
+        0.14,
+        67107701828046,
+        "randomize"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 10,
+      "type": "ImageScaleDownToSize",
+      "pos": [
+        1211.7230224609375,
+        527.714599609375
+      ],
+      "size": [
+        267.7048645019531,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleDownToSize",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        720,
+        true
+      ]
+    },
+    {
+      "id": 9,
+      "type": "Text Concatenate",
+      "pos": [
+        1257.604248046875,
+        697.95703125
+      ],
+      "size": [
+        230.89752197265625,
+        178
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text_a",
+          "name": "text_a",
+          "shape": 7,
+          "type": "STRING",
+          "link": 7
+        },
+        {
+          "label": "text_b",
+          "name": "text_b",
+          "shape": 7,
+          "type": "STRING",
+          "link": 8
+        },
+        {
+          "label": "text_c",
+          "name": "text_c",
+          "shape": 7,
+          "type": "STRING"
+        },
+        {
+          "label": "text_d",
+          "name": "text_d",
+          "shape": 7,
+          "type": "STRING"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        ", ",
+        "true"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "RH_Captioner",
+      "pos": [
+        1300.9478759765625,
+        962.6397094726562
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "ref_image",
+          "name": "ref_image",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "describe",
+          "name": "describe",
+          "type": "STRING",
+          "links": [
+            8,
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_Captioner",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Please provide a detailed description of this image. If any characters in the image are familiar to you, such as celebrities, movie characters, or animated figures, please directly use their names. The description should be as detailed as possible, but should not exceed 200 words."
+      ]
+    },
+    {
+      "id": 11,
+      "type": "easy showAnything",
+      "pos": [
+        1763.4200439453125,
+        985.9344482421875
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      2,
+      3,
+      0,
+      4,
+      1,
+      "AUDIO"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "VIDEO"
+    ],
+    [
+      7,
+      8,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      7,
+      0,
+      9,
+      1,
+      "STRING"
+    ],
+    [
+      9,
+      9,
+      0,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      10,
+      1,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      10,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      10,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      7,
+      0,
+      11,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "欢迎关注【破狼】公众号",
+      "bounding": [
+        797.3980102539062,
+        122.60964965820312,
+        1759.358154296875,
+        199.74021911621094
+      ],
+      "color": "#3f789e",
+      "font_size": 150,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "ds": {
+      "scale": 0.9646149645000006,
+      "offset": [
+        -302.03066972514756,
+        -143.5127118499506
+      ]
+    },
+    "frontendVersion": "1.23.0",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
