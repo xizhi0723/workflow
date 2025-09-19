@@ -1,0 +1,119 @@
+{
+  "last_node_id": 12,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [50, 50],
+      "inputs": {
+        "unet_name": "qwen_image_edit_fp8_e4m3fn.safetensors"
+      }
+    },
+    {
+      "id": 2,
+      "type": "VAELoader",
+      "pos": [50, 200],
+      "inputs": {
+        "vae_name": "qwen_image_vae.safetensors"
+      }
+    },
+    {
+      "id": 3,
+      "type": "CLIPLoader",
+      "pos": [50, 350],
+      "inputs": {
+        "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+      }
+    },
+    {
+      "id": 4,
+      "type": "LoraLoaderModelOnly",
+      "pos": [50, 500],
+      "inputs": {
+        "lora_name": "Qwen-Image-Lightning.safetensors",
+        "strength_model": 1.0,
+        "strength_clip": 1.0
+      },
+      "links": [
+        [1, "MODEL", 0, "MODEL"],
+        [3, "CLIP", 0, "CLIP"]
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadImage",
+      "pos": [400, 50],
+      "inputs": {
+        "image": "your_input.png"
+      }
+    },
+    {
+      "id": 6,
+      "type": "VAEEncode",
+      "pos": [600, 50],
+      "links": [
+        [5, "IMAGE", 0, "IMAGE"],
+        [2, "VAE", 0, "VAE"]
+      ]
+    },
+    {
+      "id": 7,
+      "type": "EmptyLatentImage",
+      "pos": [600, 200],
+      "inputs": {
+        "width": 512,
+        "height": 512,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [600, 350],
+      "links": [
+        [3, "CLIP", 0, "CLIP"]
+      ],
+      "inputs": {
+        "text": "手办风格，高清细节"
+      }
+    },
+    {
+      "id": 9,
+      "type": "KSampler",
+      "pos": [850, 150],
+      "links": [
+        [6, "LATENT", 0, "LATENT"],
+        [8, "CONDITIONING", 0, "CONDITIONING"],
+        [4, "MODEL", 0, "MODEL"]
+      ],
+      "inputs": {
+        "seed": 12345,
+        "steps": 20,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "normal"
+      }
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": [1050, 150],
+      "links": [
+        [9, "LATENT", 0, "LATENT"],
+        [2, "VAE", 0, "VAE"]
+      ]
+    },
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": [1250, 150],
+      "links": [
+        [10, "IMAGE", 0, "IMAGE"]
+      ],
+      "inputs": {
+        "filename_prefix": "qwen_edit_result"
+      }
+    }
+  ]
+}
